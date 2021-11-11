@@ -29,18 +29,18 @@ Here we provide some pretrained models of STME.<br>
 #### Something-Something V1
 | Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
 | ---------- | -----------| -----------| -----------| -----------|
-| STME ResNet50  | 8 x 1 x 1   | 51.9 | 79.9 | [link]() |
-| STME ResNet50  | 16 x 1 x 1   | 53.0 | 81.0 | [link]() |
+| STME ResNet50  | 8 x 1 x 1   | 51.9 | 79.9 | [link](https://drive.google.com/drive/folders/1DE9HGAkldRf2_1-lhgvpnHWPgwA0tL9E) |
+| STME ResNet50  | 16 x 1 x 1   | 53.0 | 81.0 | [link](https://drive.google.com/drive/folders/1PjokUKQeOGNRsbcFrBciz_2H8j6p080L) |
 #### Something-Something V2
 | Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
 | ---------- | -----------| -----------| -----------| -----------|
-| STME ResNet50  | 8 x 1 x 1   | 63.8 | 88.5 | [link]() |
-| STME ResNet50  | 16 x 1 x 1   | 64.8 | 88.7 | [link]() |
+| STME ResNet50  | 8 x 1 x 1   | 63.8 | 88.5 | [link](https://drive.google.com/drive/folders/1jU0TPGDIxQrzb6W2JtG4wS6ImzY8J5dH) |
+| STME ResNet50  | 16 x 1 x 1   | 64.8 | 88.7 | [link](https://drive.google.com/drive/folders/1HMdT2PgSkCCnAvT_ZZ40GGkfLR-slX5z) |
 
 (To be updated)
 ## Testing and training
 ### Testing
-For example, to test the downloaded pretrained models, you can run as following steps:
+For example, to test the downloaded [pretrained models](https://drive.google.com/drive/folders/1eN-1VPw7Kb9KKDImFjEGlsouFimPQXG-), you can run as following steps:
 #### Efficient setting (center corp and 1 clip)
   ```
   CUDA_VISIBLE_DEVICES=0 python test_models_center_crop.py something \ 
