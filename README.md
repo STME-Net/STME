@@ -12,7 +12,7 @@ The code is built with following libraries:<br>
 * Python >= 3.6
 * [Pytorch](https://pytorch.org/) >= 1.6
 * [Torchvision](https://github.com/pytorch/vision)
-* [sciki-learn](https://github.com/scikit-learn/scikit-learn)
+* [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 * [TensorboardX](https://github.com/lanpa/tensorboardX)
 * [decord](https://github.com/dmlc/decord)
 * [tqdm](https://github.com/tqdm/tqdm)
