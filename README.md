@@ -2,7 +2,7 @@
 ## Overview
 ![2021-11-07_135150](https://user-images.githubusercontent.com/93808130/140634273-6155bacc-3186-48fa-9fda-7e27138643ab.jpg) <br>
 
-We release our codes of STME. Our codes are built based on previos repos [TSN](https://github.com/yjxiong/temporal-segment-networks), [TSM](https://github.com/mit-han-lab/temporal-shift-module) and [TEA](https://github.com/Phoenix1327/tea-action-recognition). The core codes about our modules are in `ops/`.<br>
+We release our codes of STME. The core codes about our modules are in `ops/`.<br>
 * [Prerequisites](#prerequisites)<br>
 * [Data preparation](#data-preparation)<br>
 * [Pretrained models](#pretrained-models)<br>
@@ -69,3 +69,5 @@ To train STME-ResNet on Something-Something dataset, you can run:
   --lr 0.01 --lr_scheduler step --lr_steps 30 45 55 --epochs 60 --batch-size=16 \
   --wd 5e-4 --dropout 0.5 --consensus_type=avg --eval-freq=1 workers=4 --npb
   ```
+### Acknowledgment
+Our codes are built based on previous repos [TSN](https://github.com/yjxiong/temporal-segment-networks), [TSM](https://github.com/mit-han-lab/temporal-shift-module), and [TDN](https://github.com/MCG-NJU/TDN).
