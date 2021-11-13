@@ -25,7 +25,7 @@ Then, please refer [TSM/tools](https://github.com/mit-han-lab/temporal-shift-mod
 
 Finally, you should add the absolute path of your data annotations into `ops/dataset_configs.py`.
 ## Pretrained models
-Here we provide some pretrained models of STME.<br>
+Here we provide some [pretrained models](https://drive.google.com/drive/folders/1eN-1VPw7Kb9KKDImFjEGlsouFimPQXG-) of STME.<br>
 #### Something-Something V1
 | Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
 | ---------- | -----------| -----------| -----------| -----------|
