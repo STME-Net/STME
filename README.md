@@ -45,7 +45,7 @@ For example, to test the downloaded [pretrained models](https://drive.google.com
   ```
   CUDA_VISIBLE_DEVICES=0 python test_models_center_crop.py something \ 
   --archs=resnet50 --weights=your_checkpoint_path/STME_something_RGB_resnet50_avg_segment8_e60.pth.tar \ 
-  --test_segments=8  --test_crops=1 --batch_size=16 --gpus=0 --output_dir=you_pkl_path --workers=4 --clip_index=0
+  --test_segments=8  --test_crops=1 --batch_size=16 --gpus=0 --output_dir=your_pkl_path --workers=4 --clip_index=0
   ```
   ```
   python pkl_to_results.py --num_clips=1 --test_crops=1 --output_dir=your_pkl_path
@@ -55,7 +55,7 @@ For example, to test the downloaded [pretrained models](https://drive.google.com
   CUDA_VISIBLE_DEVICES=0 python test_models_three_crops.py jester \ 
   --archs=resnet50 --weights=your_checkpoint_path \ 
   --test_segments=8  --test_crops=3 --batch_size=16 --gpus=0 \
-  --full_res --output_dir=you_pkl_path --workers=4 --clip_index=0
+  --full_res --output_dir=your_pkl_path --workers=4 --clip_index=0
   ```
   you should test this scrips for 10 times and modify clip_index from 0 to 9.
   ```
