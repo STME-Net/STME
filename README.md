@@ -29,7 +29,7 @@ Here we provide some [pretrained models](https://drive.google.com/drive/folders/
 #### Something-Something V1
 | Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
 | ---------- | -----------| -----------| -----------| -----------|
-| STME ResNet50  | 8 x 1 x 1   | 51.9 | 79.9 | [link](https://drive.google.com/drive/folders/1DE9HGAkldRf2_1-lhgvpnHWPgwA0tL9E) |
+| STME ResNet50  | 8 x 1 x 1   | 52.0 | 80.0 | [link](https://drive.google.com/drive/folders/1DE9HGAkldRf2_1-lhgvpnHWPgwA0tL9E) |
 | STME ResNet50  | 16 x 1 x 1   | 53.0 | 81.0 | [link](https://drive.google.com/drive/folders/1PjokUKQeOGNRsbcFrBciz_2H8j6p080L) |
 #### Something-Something V2
 | Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
