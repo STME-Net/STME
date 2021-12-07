@@ -67,9 +67,9 @@ For example, to test the downloaded [pretrained models](https://drive.google.com
 To train STME-ResNet on Something-Something dataset, you can run:
   ```
   python -m torch.distributed.launch --nproc_per_node=4 \
-  main.py something RGB --archs=resnet50 --num_segments=8 --gd 20 \
+  main.py something RGB --arch=resnet50 --num_segments=8 --gd 20 \
   --lr 0.01 --lr_scheduler step --lr_steps 30 45 55 --epochs 60 --batch-size=16 \
-  --wd 5e-4 --dropout 0.5 --consensus_type=avg --eval-freq=1 workers=4 --npb
+  --wd 5e-4 --dropout 0.5 --consensus_type=avg --eval-freq=1 --workers=4 --npb
   ```
 ### Acknowledgment
 Our codes are built based on previous repos [TSN](https://github.com/yjxiong/temporal-segment-networks), [TSM](https://github.com/mit-han-lab/temporal-shift-module), and [TDN](https://github.com/MCG-NJU/TDN).
