@@ -45,7 +45,7 @@ class STME_Net(nn.Module):
         recep3 = nn.functional.conv2d(x_c5, self.share_weight_conv, bias=None, stride=1,padding=3, dilation=3)
         recep3 = self.bn_3(recep3)
 
-        x_diff = 1.0 / 3.0 * recep1 + 1.0 / 3.0 * recep2 + 1.0 / 3.0 * recep3  # [64,8,112,112]
+        x_diff = 1.0 / 3.0 * recep1 + 1.0 / 3.0 * recep2 + 1.0 / 3.0 * recep3 
 
         x_diff = self.conv(x_diff)
 
