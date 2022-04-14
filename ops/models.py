@@ -78,7 +78,7 @@ class TSN(nn.Module):
     def _prepare_base_model(self, base_model, num_segments):
         print(('=> base model: {}'.format(base_model)))
         if 'resnet' in base_model :
-            self.base_model = stme_net(base_model, num_segments)
+            self.base_model = stme_net(base_model, num_segments)  # stme
             self.base_model.last_layer_name = 'fc'
             self.input_size = 224
             self.input_mean = [0.485, 0.456, 0.406]
