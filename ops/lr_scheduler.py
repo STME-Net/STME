@@ -2,7 +2,7 @@ from torch.optim.lr_scheduler import _LRScheduler, MultiStepLR, CosineAnnealingL
 
 class GradualWarmupScheduler(_LRScheduler):
     """ Gradually warm-up(increasing) learning rate in optimizer.
-      Proposed in 'Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour'.
+      Proposed in Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour'.
       Args:
           optimizer (Optimizer): Wrapped optimizer.
           multiplier: init learning rate = base lr / multiplier
