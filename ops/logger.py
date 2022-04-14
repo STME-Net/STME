@@ -64,7 +64,7 @@ def setup_logger(
         ch.setFormatter(formatter)
         logger.addHandler(ch)
 
-    # file logging: all workers
+    # file logging: all workers 
     if output is not None:
         if output.endswith(".txt") or output.endswith(".log"):
             filename = output
