@@ -1,6 +1,6 @@
 <!--- # STME:A Spatiotemporal and Motion Information Extraction Network for Action Recognition -->
 ## Prerequisites
-The code is built with following libraries:<br>
+The code is built with following libraries:<br> 
 * Python >= 3.6
 * [Pytorch](https://pytorch.org/) >= 1.6
 * [Torchvision](https://github.com/pytorch/vision)
