@@ -339,7 +339,7 @@ class Stack(object):
 
 class ToTorchFormatTensor(object):
     """ Converts a PIL.Image (RGB) or numpy.ndarray (H x W x C) in the range [0, 255]
-    to a torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0] """
+    to a torch.FloatTensor of shape (CxHxW) in the range [0.0, 1.0] """
     def __init__(self, div=True):
         self.div = div
 
