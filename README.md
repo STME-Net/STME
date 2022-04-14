@@ -1,14 +1,4 @@
-<!--- # STME:A Spatiotemporal and Motion Information Extraction Network for Action Recognition
-
-
--->
-![2021-11-07_135150](https://user-images.githubusercontent.com/93808130/140634273-6155bacc-3186-48fa-9fda-7e27138643ab.jpg) <br>
-## Overview
-We release our codes of STME. The core codes about our modules are in `ops/`.<br>
-* [Prerequisites](#prerequisites)<br>
-* [Data preparation](#data-preparation)<br>
-* [Pretrained models](#pretrained-models)<br>
-* [Testing and training](#testing-and-training)<br>
+<!--- # STME:A Spatiotemporal and Motion Information Extraction Network for Action Recognition -->
 ## Prerequisites
 The code is built with following libraries:<br>
 * Python >= 3.6
@@ -20,25 +10,8 @@ The code is built with following libraries:<br>
 * [tqdm](https://github.com/tqdm/tqdm)
 * [termcolor](https://github.com/ikalnytskyi/termcolor)
 * [ffmpeg](https://www.ffmpeg.org/)
-## Data preparation
-We have successfully trained on [Jester](https://20bn.com/datasets/jester), [Something-Something V1](https://20bn.com/datasets/something-something/v1) and [V2](https://20bn.com/datasets/something-something/v2) datasets. For detailed data pre-processing, please refer [TSM](https://github.com/mit-han-lab/temporal-shift-module).<br>
-
-Then, please refer [TSM/tools](https://github.com/mit-han-lab/temporal-shift-module/tree/master/tools) to generate data annotations.<br>
-
-Finally, you should add the absolute path of your data annotations into `ops/dataset_configs.py`.
 ## Pretrained models
 Here we provide some [pretrained models](https://drive.google.com/drive/folders/1eN-1VPw7Kb9KKDImFjEGlsouFimPQXG-) of STME.<br>
-#### Something-Something V1
-| Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
-| ---------- | -----------| -----------| -----------| -----------|
-| STME ResNet50  | 8 x 1 x 1   | 52.0 | 80.0 | [link](https://drive.google.com/drive/folders/1DE9HGAkldRf2_1-lhgvpnHWPgwA0tL9E) |
-| STME ResNet50  | 16 x 1 x 1   | 53.0 | 81.0 | [link](https://drive.google.com/drive/folders/1PjokUKQeOGNRsbcFrBciz_2H8j6p080L) |
-#### Something-Something V2
-| Model  | Frames x Crops x Clips | Val Top1 | Val Top5 | checkpoint |
-| ---------- | -----------| -----------| -----------| -----------|
-| STME ResNet50  | 8 x 1 x 1   | 63.8 | 88.5 | [link](https://drive.google.com/drive/folders/1jU0TPGDIxQrzb6W2JtG4wS6ImzY8J5dH) |
-| STME ResNet50  | 16 x 1 x 1   | 64.8 | 88.7 | [link](https://drive.google.com/drive/folders/1HMdT2PgSkCCnAvT_ZZ40GGkfLR-slX5z) |
-
 (To be updated)
 ## Testing and training
 ### Testing
@@ -54,7 +27,7 @@ For example, to test the downloaded [pretrained models](https://drive.google.com
   ```
 #### Accurate setting (full resolution and 10 clips)
   ```
-  CUDA_VISIBLE_DEVICES=0 python test_models_three_crops.py jester \ 
+  CUDA_VISIBLE_DEVICES=0 python test_models_three_crops.py spmething \ 
   --archs=resnet50 --weights=your_checkpoint_path \ 
   --test_segments=8  --test_crops=3 --batch_size=16 --gpus=0 \
   --full_res --output_dir=your_pkl_path --workers=4 --clip_index=0
