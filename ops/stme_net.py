@@ -8,7 +8,7 @@ class STME_Net(nn.Module):
     def __init__(self, resnet_model, resnet_model1, apha, belta):
         super(STME_Net, self).__init__()
 
-        self.avg_diff = nn.AvgPool2d(kernel_size=2, stride=2)  # AvgPool
+        self.avg_diff = nn.AvgPool2d(kernel_size=2, stride=2) 
 
         self.share_weight_conv = nn.Parameter(torch.randn(12, 12, 3, 3)) #in_channels=12,out_channels=12,kernel_size=3*3
         self.bn_1 = nn.BatchNorm2d(12)
