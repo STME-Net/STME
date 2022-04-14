@@ -4,7 +4,7 @@ ROOT_DATASET = 'your_data_path/dataset/'
 def return_something(modality):
     filename_categories = 'something/category.txt'
     if modality == 'RGB' or modality== 'RGBDiff':
-        root_data = ROOT_DATASET + "something/20bn-something-something-v1"
+        root_data = ROOT_DATASET + "something/20bn-something-something-v1" 
         filename_imglist_train = "something/train_videofolder.txt"
         filename_imglist_val = "something/val_videofolder.txt"
         prefix = '{:05d}.jpg'
