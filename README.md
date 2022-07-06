@@ -12,6 +12,7 @@ The code is built with following libraries:<br>
 * [ffmpeg](https://www.ffmpeg.org/)
 ## Pretrained models
 Here we provide some [pretrained models](https://drive.google.com/drive/folders/1eN-1VPw7Kb9KKDImFjEGlsouFimPQXG-) of STME.<br>
+Adding Kinetics-400 dataset.<br>
 (To be updated)
 ## Testing and training
 ### Testing
@@ -37,7 +38,7 @@ For example, to test the downloaded [pretrained models](https://drive.google.com
   python pkl_to_results.py --num_clips=10 --test_crops=3 --output_dir=your_pkl_path
   ```  
 ### Training
-To train STME-ResNet on Something-Something dataset, you can run:
+To train STME on Something-Something dataset, you can run:
   ```
   python -m torch.distributed.launch --nproc_per_node=4 \
   main.py something RGB --arch=resnet50 --num_segments=8 --gd 20 \
