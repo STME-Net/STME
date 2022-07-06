@@ -144,7 +144,7 @@ class TSNDataSet(data.Dataset):
     def __getitem__(self, index):
         record = self.video_list[index]
         
-        if('something' or 'jester' in self.dataset):
+        if('something' in self.dataset or 'jester' in self.dataset):
             decode_boo = False
             video_list = os.listdir(record.path)
         
@@ -152,11 +152,11 @@ class TSNDataSet(data.Dataset):
             decode_boo = True
             try:
                 directory = record.path
-                if directory[-4:] != ".mp4":
-                    video_path = directory+".mp4"
-                else:
-                    video_path = directory
-                video_list = decord.VideoReader(video_path)
+                #if directory[-4:] != ".mp4":
+                #    video_path = directory+".mp4"
+                #else:
+                #    video_path = directory
+                video_list = decord.VideoReader(directory)
             except UnicodeDecodeError:
                 decode_boo = False
                 video_list = os.listdir(record.path)
