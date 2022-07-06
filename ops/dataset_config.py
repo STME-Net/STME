@@ -1,6 +1,17 @@
 import os
 ROOT_DATASET = 'your_data_path/dataset/'
 
+def return_kinetics(modality):
+    filename_categories = 'kinect400/category.txt'
+    if modality == 'RGB':
+        root_data = ROOT_DATASET + "kinect400"
+        filename_imglist_train = "kinect400/train_videofolder.txt"
+        filename_imglist_val = "kinect400/val_videofolder.txt"
+        prefix = 'image_{:05d}.jpg'
+    else:
+        raise NotImplementedError('no such modality:' + modality)
+    return filename_categories, filename_imglist_train, filename_imglist_val, root_data, prefix
+
 def return_something(modality):
     filename_categories = 'something/category.txt'
     if modality == 'RGB' or modality== 'RGBDiff':
@@ -46,7 +57,7 @@ def return_jester(modality):
     return filename_categories, filename_imglist_train, filename_imglist_val, root_data, prefix
 
 def return_dataset(dataset, modality):
-    dict_single = {'jester': return_jester, 'something': return_something, 'somethingv2': return_somethingv2}
+    dict_single = {'kinetics': return_kinetics, 'jester': return_jester, 'something': return_something, 'somethingv2': return_somethingv2}
     if dataset in dict_single:
         file_categories, file_imglist_train, file_imglist_val, root_data, prefix = dict_single[dataset](modality)
     else:
