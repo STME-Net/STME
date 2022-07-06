@@ -21,7 +21,8 @@ For example, to test the downloaded [pretrained models](https://drive.google.com
   ```
   CUDA_VISIBLE_DEVICES=0 python test_models_center_crop.py something \ 
   --archs=resnet50 --weights=your_checkpoint_path \ 
-  --test_segments=8  --test_crops=1 --batch_size=16 --gpus 0 --output_dir=your_pkl_path --workers=4 --clip_index=0
+  --test_segments=8  --test_crops=1 --batch_size=16 \
+  --gpus 0 --output_dir=your_pkl_path --workers=4 --clip_index=0
   ```
   ```
   python pkl_to_results.py --num_clips=1 --test_crops=1 --output_dir=your_pkl_path
